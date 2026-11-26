@@ -1,4 +1,3 @@
-
 import numpy as np
 
 try:
@@ -150,14 +149,9 @@ try:
     )
 
     print("\nPemeriksaan Constraint:")
-    print("Internet minimal 1 kali:",
-          "Terpenuhi" if sum(x[5, :]) >= 1 else "Tidak Terpenuhi")
-    print("Jajan minimal 1 kali:",
-          "Terpenuhi" if sum(x[6, :]) >= 1 else "Tidak Terpenuhi")
-    print("Anggaran setiap hari:",
-          "Terpenuhi" if np.all(
-              np.sum(w[:, None] * x, axis=0) <= u
-          ) else "Tidak Terpenuhi")
+    print("Internet minimal 1 kali:","Terpenuhi" if sum(x[5, :]) >= 1 else "Tidak Terpenuhi")
+    print("Jajan minimal 1 kali:","Terpenuhi" if sum(x[6, :]) >= 1 else "Tidak Terpenuhi")
+    print("Anggaran setiap hari:", "Terpenuhi" if np.all(np.sum(w[:, None] * x, axis=0) <= u ) else "Tidak Terpenuhi")
 
     print("\nNilai Variabel Keputusan:")
     for i in range(n):
